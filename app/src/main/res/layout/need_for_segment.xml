@@ -1,0 +1,104 @@
+<android.support.v4.widget.DrawerLayout xmlns:android="http://schemas.android.com/apk/res/android"
+                                        android:id="@+id/drawer_layout"
+                                        android:layout_width="match_parent"
+                                        android:layout_height="match_parent" >
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/White" >
+
+        <LinearLayout
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent"
+            android:background="@color/Gray4"
+            android:orientation="vertical" >
+
+            <include
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                layout="@layout/action_bar" />
+
+            <include
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                layout="@layout/darkhast_info" />
+
+            <LinearLayout
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:background="@color/White"
+                android:orientation="vertical"
+                android:padding="10dp" >
+
+                <LinearLayout
+                    android:layout_width="fill_parent"
+                    android:layout_height="fill_parent"
+                    android:background="@color/White"
+                    android:orientation="vertical"
+                    android:padding="5dp"
+                    android:weightSum="2" >
+
+                    <LinearLayout
+                        android:layout_width="fill_parent"
+                        android:layout_height="0dp"
+                        android:layout_weight="1"
+                        android:background="@color/White"
+                        android:gravity="center"
+                        android:orientation="horizontal"
+                        android:padding="3dp"
+                        android:weightSum="9" >
+                        <Spinner
+                            android:id="@+id/spinnerResiverSegment"
+                            style="@style/spinnereciver"
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="6"
+                            android:clickable="true"
+                            android:drawSelectorOnTop="true"
+                            android:dropDownVerticalOffset="-53dp"
+                            android:spinnerMode="dropdown" />
+
+                        <TextView
+                            android:id="@+id/tvOlaviatSegment"
+                            style="@style/TitleUnder"
+                            android:layout_width="0dp"
+                            android:layout_height="match_parent"
+                            android:layout_weight="3"
+                            android:text="@string/Resiver" />
+
+                        <TextView
+                            android:id="@+id/tvResiversSegment"
+                            style="@style/TitleUnder"
+                            android:layout_width="0dp"
+                            android:layout_height="match_parent"
+                            android:layout_weight="3"
+                            android:text="@string/Resiver" />
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="fill_parent"
+                        android:layout_height="0dp"
+                        android:layout_weight="1"
+                        android:background="@color/White"
+                        android:gravity="center"
+                        android:orientation="horizontal"
+                        android:padding="3dp" >
+
+                        <Button
+                            android:state_pressed="true"
+                            android:background="@drawable/button_round"
+                            android:state_enabled="true"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:text="@string/Sabt"
+                            android:id="@+id/BtnSegmentSabt"/>
+                    </LinearLayout>
+                </LinearLayout>
+            </LinearLayout>
+        </LinearLayout>
+    </ScrollView>
+
+    <include layout="@layout/navigashon_menu" />
+
+</android.support.v4.widget.DrawerLayout>

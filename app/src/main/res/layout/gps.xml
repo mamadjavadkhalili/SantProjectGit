@@ -1,0 +1,110 @@
+<android.support.v4.widget.DrawerLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/drawer_layout"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent" >
+
+    <ScrollView
+        xmlns:android="http://schemas.android.com/apk/res/android"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:background="@color/White" >
+
+        <TableLayout
+            android:id="@+id/tableLayout1"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:background="@color/abc_background_cache_hint_selector_material_light" >
+
+            <include
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                layout="@layout/action_bar"
+                android:layout_span="2"/>
+
+            <TableRow
+                android:id="@+id/tableRow2"
+                android:layout_width="wrap_content"
+                android:layout_height="0dp"
+                android:layout_weight="1"
+                android:padding="5dip" >
+
+                <include
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    layout="@layout/darkhast_info" />
+            </TableRow>
+
+            <TableRow
+                android:id="@+id/tableRow3"
+                android:layout_width="wrap_content"
+                android:layout_height="0dp"
+                android:layout_weight="1"
+                android:background="@color/White"
+                android:padding="10dip" >
+
+                <TextView
+                    android:id="@+id/tvGPS_W"
+                    style="@style/FillDarkhastInfo"
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="2"
+                    android:background="@android:drawable/editbox_background_normal"
+                    android:gravity="center_vertical|center_horizontal" />
+
+                <TextView
+                    style="@style/TitleUnder"
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:text="@string/GPSW" />
+            </TableRow>
+
+            <TableRow
+                android:id="@+id/tableRow4"
+                android:layout_width="wrap_content"
+                android:layout_height="0dp"
+                android:layout_weight="1"
+                android:background="@color/White"
+                android:padding="10dip" >
+
+                <TextView
+                    android:id="@+id/tvGPS_L"
+                    style="@style/FillDarkhastInfo"
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="2"
+                    android:background="@android:drawable/editbox_background_normal"
+                    android:gravity="center_vertical|center_horizontal"
+                    android:singleLine="true" />
+
+                <TextView
+                    style="@style/TitleUnder"
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:text="@string/GPSL" />
+            </TableRow>
+
+             <TableRow
+                android:id="@+id/tableRow5"
+                android:layout_width="wrap_content"
+                android:layout_height="0dp"
+                android:layout_weight="3"
+                android:background="@color/White"
+                android:padding="10dip" >
+
+                <Button
+                    android:id="@+id/BtnSegmentSabt"
+                    style="@style/button_sabt"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:background="@drawable/button_round"
+                    android:text="@string/Sabt" />
+
+            </TableRow>
+
+        </TableLayout>
+    </ScrollView>
+
+</android.support.v4.widget.DrawerLayout>
